@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLACKPINK at Coachella</title>
+    <link rel="stylesheet" href="form.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="BLACKPINK Logo" />
+        <h1 class="header_logo">BLACKPINK</h1>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <i data-feather="x" class="close" id="close-menu"></i>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link">Home</a>
+          </li>
+          <li class="nav_item">
+            <a href="#purchase" class="nav_link">Purchase</a>
+          </li>
+        </ul>
+      </nav>
+      <i data-feather="menu" class="toggle" id="toggle-menu"></i>
+    </header>
+    <script>
+      feather.replace();
+    </script>
+
+    <section class="tickets" id="purchase">
+      <h1 class="heading"><span>Purchase</span> now</h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="assets/purchase.jpg" alt="" />
+        </div>
+
+        <form id="purchaseForm">
+          <h3>Ticket purchase data</h3>
+          <label for="nama">Name</label><br />
+          <input
+            type="text"
+            placeholder="Your Name"
+            id="nama"
+            class="box"
+            required
+          /><br />
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            class="box"
+            required
+          /><br />
+          <label for="tanggal">Date</label><br />
+          <input type="date" class="box" id="tanggal" required /><br />
+
+          <label for="jenis_tiket">Ticket Type</label><br />
+          <select id="jenis_tiket" class="box" required>
+            <option hidden=""></option>
+            <option value="VVIP">VVIP</option>
+            <option value="VIP">VIP</option>
+            <option value="Reguler">Reguler</option></select
+          ><br />
+
+          <p>Payment Method</p>
+          <div class="payment-method">
+            <div class="payment-option">
+              <input
+                type="radio"
+                name="metode_pembayaran"
+                id="kartu_kredit"
+                value="Kartu Kredit"
+                required
+              />
+              <label for="kartu_kredit">Credit Card</label>
+            </div>
+            <div class="payment-option">
+              <input
+                type="radio"
+                name="metode_pembayaran"
+                id="transfer_bank"
+                value="Transfer Bank"
+                required
+              />
+              <label for="transfer_bank">Bank Transfer</label>
+            </div>
+            <div class="payment-option">
+              <input
+                type="radio"
+                name="metode_pembayaran"
+                id="paypal"
+                value="PayPal"
+                required
+              />
+              <label for="paypal">PayPal</label>
+            </div>
+          </div>
+          <label for="informasi">Additional Information</label><br />
+          <textarea
+            placeholder="Write additional information here"
+            name="informasi"
+            id="informasi"
+            cols="30"
+            rows="5"
+            class="box"
+          ></textarea
+          ><br />
+          <input type="submit" value="Purchase Now" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <script src="form.js"></script>
+  </body>
+</html>
